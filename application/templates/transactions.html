@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<div class="d-flex justify-content-center">
+    <div class="container-transactions">
+        <h2>£{{ value }}</a></h2>
+        <div id="logo-banner">
+            <img class="arrow rounded mx-auto d-block" src="../static/img/down-arrow.png" alt="currency">
+        </div>
+        <h2>{{ value1 }} {{ value2 }}</h2>
+        <h3>Rate: £1 ={{ value3 }} {{ value2 }}</h3>
+        <div class="forms">
+            <form action="", method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.csrf_token() }}
+            <div class="btn-group transaction-buttons">
+                <a href="/login" role="button" class="btn btn-danger btn-lg button-option">Decline exchange</a>
+                <a href="/checkout" role="button" class="btn btn-success btn-lg button-option">Accept exchange</a>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+
+</div>
+{% endblock %}
