@@ -6,9 +6,11 @@ from __init__ import create_app, db
 from functions import new_balance, hash_password
 from api_file import Currency
 
-
 session = Session()
 app = create_app()
+
+with app.app_context():
+    db.create_all()
 
 # setting our global variables to updating in functions
 GBP_amount = 0

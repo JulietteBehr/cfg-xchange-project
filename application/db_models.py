@@ -72,6 +72,3 @@ class currency_codes(db.Model):
 
     def __repr__(self):
         return f"currency_codes('{self.currency_three_letters}', '{self.currency_name}', '{self.country}')"
-
-
-db.create_all()
